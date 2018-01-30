@@ -6,40 +6,113 @@ namespace Nile.Host
     {
         static void Main( string[] args )
         {
+            bool quit = false;
+            while (!quit)
+            {
+                //Display Menu
 
+                char choice = DisplayMenu();
+
+                //Process menu selection
+                switch (choice)
+                {
+                    case 'l':
+                    case 'L': ListProducts(); break;
+
+                    case 'a':
+                    case 'A': AddProduct(); break;
+
+                    case 'q':
+                    case 'Q': quit = true; break;
+                };
+            };
         }
 
-        static void PlayingWithPrimitives ()
+        private static char DisplayMenu()
         {
-            //Primitive
-            decimal unitPrice = 10.5m;
+            do
+            {
+                Console.WriteLine("L)ist Products");
+                Console.WriteLine("A)dd Product");
+                Console.WriteLine("Q)uit");
 
-            //real declaration
-            System.Decimal unitPrice2 = 10.5m;
+                string input = Console.ReadLine();
 
-            //current time
-            DateTime now = DateTime.Now;
-
-            System.Collections.ArrayList items;
+                if (input == "L" || input == "l")
+                    return input[0];
+                else if (input == "A" || input == "a")
+                    return input[0];
+                else if (input == "Q")
+                    return input[0];
+                
+                Console.WriteLine("Please choose a valid option");
+            } while (true);
         }
-        static void PlayingWithVariables ()
+
+        static void AddProduct()
         {
+            //Get name
+            _name = ReadString("Enter name: ", true);
 
-            int hours;
-            double rate = .85;
+            //get Price
+            _price = ReadDecimal("Enter Price: ", 0);
 
-            double poof, hot, cold;
-            double minute = 83.125;
-            string firstName, lastName;
+            //Get description
+            _description = ReadString("Enter optional description: ", false);
 
-            firstName = "Bob";
-            lastName = "miller";
-
-            firstName = lastName = "Sue";
-
-            double ceiling = Math.Ceiling(rate);
-            firstName = "hello";
-            double floor = ceiling;
         }
+
+        private static string ReadString(string message, bool isRequired)
+        {
+            do
+            {
+                Console.Write(message);
+                string value = Console.ReadLine();
+
+                //if not required or not empty
+                if (!isRequired || value != "")
+                    return value;
+
+                Console.WriteLine("Value is required");
+            } while (true);
+        }
+
+        private static decimal ReadDecimal( string message, decimal minValue )
+        {
+            do
+            {
+                Console.Write(message);
+                string value = Console.ReadLine();
+
+                decimal result;
+                if (Decimal.TryParse(value, out result))
+                {
+                    //if not required or not empty
+                    if (result >= minValue)
+                        return result;
+                };
+
+                Console.WriteLine("Value must be >= {0}", minValue);
+            } while (true);
+        }
+
+        private static void ListProducts()
+        {
+            //Are there any products?
+            if (_name != null && _name != "")
+            {
+
+                //display a product
+                Console.WriteLine(_name);
+                Console.WriteLine(_price);
+                Console.WriteLine(_description);
+            } else
+                Console.WriteLine("No products");
+        }
+
+        //data for a product
+        static string _name;
+        static decimal _price;
+        static string _description;
     }
 }
