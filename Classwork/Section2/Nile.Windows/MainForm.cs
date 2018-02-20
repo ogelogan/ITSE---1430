@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * ITSE 1430
+ * Classwork
+ */
+using System;
 using System.Windows.Forms;
 
 namespace Nile.Windows
@@ -24,35 +21,105 @@ namespace Nile.Windows
             //PlayingWithProductMembers();
         }
 
-        protected void PlayingWithProductMembers()
-        {
-
+        //Just a method to play around with members of our Product class
+        private void PlayingWithProductMembers ()
+        { 
+            //Create a new product
             var product = new Product();
 
+            //Cannot use properties as out parameters
             Decimal.TryParse("123", out var price);
             product.Price = price;
 
+            //Get the property Name, no need for a function
             var name = product.Name;
             //var name = product.GetName();
+
+            //Set the property Name, Price and IsDiscontinued
             product.Name = "Product A";
             product.Price = 50;
             product.IsDiscontinued = true;
 
-            var price2 = product.ActualPrice;
-
-            //product.setName("Product A");
+            //ActualPrice is calculated so you cannot set it
+            //product.ActualPrice = 10;
+            var price2 = product.ActualPrice;                
+            
+            //product.SetName("Product A");
             //product.Description = "None";
+
+            //Validate the product
             var error = product.Validate();
 
+            //Convert anything to a string
             var str = product.ToString();
 
+            //Create another product
             var productB = new Product();
             //productB.Name = "Product B";
-            //productB.setName("Product B");
-            //productB.Description = product.Description;
+            //productB.SetName("Product B");
+            //productB.Description = product.Description;            
+
+            //Validate the new product
             error = productB.Validate();
-            
-            
         }
+
+        #region Event Handlers
+
+        private void OnFileExit( object sender, EventArgs e )
+        {
+            MessageBox.Show(this, "Not implemented", "File Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        private void OnProductAdd ( object sender, EventArgs e )
+        {
+            var form = new ProductDetailForm();
+            form.Text = "Add Product";
+
+            //Show form modally
+            var result = form.ShowDialog(this);
+            if (result != DialogResult.OK)
+                return;
+
+            //"Add" the product
+            _product = form.Product;
+        }
+
+        private void OnProductEdit( object sender, EventArgs e )
+        {
+            var form = new ProductDetailForm();
+            form.Text = "Add Product";
+
+            //Show form modally
+            var result = form.ShowDialog(this);
+            if (result != DialogResult.OK)
+                return;
+
+            //"Add" the product
+            _product = form.Product;
+        }
+
+        private void OnProductRemove( object sender, EventArgs e )
+        {
+            if (!ShowConfirmation("Are you sure?", "Remove Product"))                             
+                return;
+
+            //TODO: Remove product
+            MessageBox.Show("Not implemented");
+        }        
+        
+        private void OnHelpAbout( object sender, EventArgs e )
+        {
+            MessageBox.Show(this, "Not implemented", "Help About", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+        #endregion
+
+        private bool ShowConfirmation ( string message, string title )
+        {
+            return MessageBox.Show(this, message, title
+                             , MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                           == DialogResult.Yes;
+        }
+
+        private Product _product;
     }
 }
