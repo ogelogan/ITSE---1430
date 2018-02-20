@@ -17,6 +17,20 @@ namespace Nile.Windows
         /// <summary>Gets or sets the product being edited.</summary>
         public Product Product { get; set; }
 
+        protected override void OnLoad( EventArgs e )
+        {
+            base.OnLoad(e);
+
+            //load product
+            if (Product != null)
+            {
+                _txtName.Text = Product.Name;
+                _txtDescription.Text = Product.Description;
+                _txtPrice.Text = Product.Price.ToString();
+                _chkIsDiscontinued.Checked = Product.IsDiscontinued;
+            }
+        }
+
         #region Event Handlers
 
         private void OnCancel( object sender, EventArgs e )
@@ -47,6 +61,11 @@ namespace Nile.Windows
                 return price;
 
             return -1;
+        }
+
+        private void ProductDetailForm_Load( object sender, EventArgs e )
+        {
+
         }
     }
 }
