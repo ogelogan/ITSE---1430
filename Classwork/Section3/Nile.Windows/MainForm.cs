@@ -86,15 +86,16 @@ namespace Nile.Windows
             _database.Add(form.Product, out var message);
             if (!String.IsNullOrEmpty(message))
                 MessageBox.Show(message);
+
+            RefreshUI();
         }
 
 
 
         private void OnProductEdit( object sender, EventArgs e )
         {
-            //get the first product
-            var products = _database.GetAll();
-            var product = (products.Length > 0) ? products[0] : null;
+            //get selected product
+            var product = GetSelectedProduct();
             if (product == null)
                 return;
 
@@ -104,16 +105,26 @@ namespace Nile.Windows
                 return;
 
             //Editing to database
+            form.Product.Id = product.Id;
             _database.Edit(form.Product, out var message);
             if (!String.IsNullOrEmpty(message))
                 MessageBox.Show(message);
+
+            RefreshUI();
+        }
+
+        private Product GetSelectedProduct ()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+                return dataGridView1.SelectedRows[0].DataBoundItem as Product;
+
+            return null;
         }
 
         private void OnProductRemove( object sender, EventArgs e )
         {
             //get the first product
-            var products = _database.GetAll();
-            var product = (products.Length > 0) ? products[0] : null;
+            var product = GetSelectedProduct();
             if (product == null)
                 return;
 
@@ -122,6 +133,8 @@ namespace Nile.Windows
 
             //Remove product
             _database.Remove(product.Id);
+
+            RefreshUI();
         }        
         
         private void OnHelpAbout( object sender, EventArgs e )
