@@ -1,0 +1,13 @@
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\bin\Debug\Nile.Windows.exe.config
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\bin\Debug\Nile.Windows.exe
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\bin\Debug\Nile.Windows.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Lab2.Windows.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Nile.Windows.MainForm.resources
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Nile.Windows.MovieDetailForm.resources
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Nile.Windows.Properties.Resources.resources
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Lab2.Windows.csproj.GenerateResource.Cache
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Lab2.Windows.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Nile.Windows.exe
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab 2\Nile.Windows\obj\Debug\Nile.Windows.pdb
