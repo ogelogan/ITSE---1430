@@ -3,7 +3,9 @@
  * Classwork
  */
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using Nile.Data;
 using Nile.Data.Memory;
 
 namespace Nile.Windows
@@ -14,53 +16,12 @@ namespace Nile.Windows
         {
             InitializeComponent();
         }
-        // change for repo
+
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad(e);
+
             RefreshUI();
-        }
-
-        //Just a method to play around with members of our Product class
-        private void PlayingWithProductMembers ()
-        { 
-            //Create a new product
-            var product = new Product();
-
-            //Cannot use properties as out parameters
-            Decimal.TryParse("123", out var price);
-            product.Price = price;
-
-            //Get the property Name, no need for a function
-            var name = product.Name;
-            //var name = product.GetName();
-
-            //Set the property Name, Price and IsDiscontinued
-            product.Name = "Product A";
-            product.Price = 50;
-            product.IsDiscontinued = true;
-
-            //ActualPrice is calculated so you cannot set it
-            //product.ActualPrice = 10;
-            var price2 = product.ActualPrice;                
-            
-            //product.SetName("Product A");
-            //product.Description = "None";
-
-            //Validate the product
-            var error = product.Validate();
-
-            //Convert anything to a string
-            var str = product.ToString();
-
-            //Create another product
-            var productB = new Product();
-            //productB.Name = "Product B";
-            //productB.SetName("Product B");
-            //productB.Description = product.Description;            
-
-            //Validate the new product
-            error = productB.Validate();
         }
 
         #region Event Handlers
@@ -72,7 +33,6 @@ namespace Nile.Windows
 
         private void OnProductAdd ( object sender, EventArgs e )
         {
-            //test thing
             var button = sender as ToolStripMenuItem;
 
             var form = new ProductDetailForm("Add Product");
@@ -88,51 +48,56 @@ namespace Nile.Windows
                 MessageBox.Show(message);
 
             RefreshUI();
+            //Find empty array element
+            //var index = FindEmptyProductIndex();
+            //if (index >= 0)
+            //_products[index] = form.Product;                    
         }
-
-
 
         private void OnProductEdit( object sender, EventArgs e )
         {
-            //get selected product
+            //Get selected product
             var product = GetSelectedProduct();
             if (product == null)
                 return;
 
-            var form = new ProductDetailForm(product);
+            //var index = FindEmptyProductIndex() - 1;
+            //if (index < 0)
+            //    return;                        
+            //if (_product == null)
+            //    return;
+
+            var form = new ProductDetailForm(product);            
             var result = form.ShowDialog(this);
             if (result != DialogResult.OK)
                 return;
 
-            //Editing to database
+            //Update the product
             form.Product.Id = product.Id;
-            _database.Edit(form.Product, out var message);
+            _database.Update(form.Product, out var message);
             if (!String.IsNullOrEmpty(message))
                 MessageBox.Show(message);
 
             RefreshUI();
         }
 
-        private Product GetSelectedProduct ()
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-                return dataGridView1.SelectedRows[0].DataBoundItem as Product;
-
-            return null;
-        }
-
         private void OnProductRemove( object sender, EventArgs e )
         {
-            //get the first product
+            //var index = FindEmptyProductIndex() - 1;
+            //if (index < 0)
+            //  return;
+
+            //Get the selected product
             var product = GetSelectedProduct();
             if (product == null)
                 return;
 
-            if (!ShowConfirmation("Are you sure?", "Remove Product"))
+            if (!ShowConfirmation("Are you sure?", "Remove Product"))                             
                 return;
 
             //Remove product
             _database.Remove(product.Id);
+            //_products[index] = null;
 
             RefreshUI();
         }        
@@ -143,13 +108,23 @@ namespace Nile.Windows
         }
         #endregion
 
-        private void RefreshUI()
+        private Product GetSelectedProduct ( )
+        {
+            //Get the first selected row in the grid, if any
+            if (dataGridView1.SelectedRows.Count > 0)
+                return dataGridView1.SelectedRows[0].DataBoundItem as Product;
+
+            return null;
+        }
+
+        private void RefreshUI ()
         {
             //Get products
             var products = _database.GetAll();
+            //products[0].Name = "Product A";
 
             //Bind to grid
-            dataGridView1.DataSource = products;
+            dataGridView1.DataSource = new List<Product>(products);
         }
 
         private bool ShowConfirmation ( string message, string title )
@@ -159,6 +134,6 @@ namespace Nile.Windows
                            == DialogResult.Yes;
         }
 
-        private MemoryProductDatabase _database = new MemoryProductDatabase();
+        private IProductDatabase _database = new MemoryProductDatabase();
     }
 }

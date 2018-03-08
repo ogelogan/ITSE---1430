@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -91,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nile.Data.Memory\Nile.Data.Memory.csproj">
-      <Project>{f95ae9be-fb3f-41c6-b6fe-a7a4c32edeff}</Project>
+      <Project>{691bf6d8-b36d-4483-8d50-9f605b2c8267}</Project>
       <Name>Nile.Data.Memory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Nile\Nile.csproj">
