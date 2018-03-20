@@ -38,7 +38,7 @@ namespace Nile.Data
             };
 
             //Verify unique product
-            var existing = GetProductByName(product.Name);
+            var existing = GetProductByNameCore(product.Name);
             if (existing != null)
             {
                 message = "Product already exists.";
@@ -58,6 +58,7 @@ namespace Nile.Data
         /// </remarks>
         public Product Update ( Product product, out string message )
         {
+            message = "";
             //Check for null
             if (product == null)
             {
@@ -76,27 +77,21 @@ namespace Nile.Data
             };
 
             //Verify unique product
-            var existing = GetProductByName(product.Name);
+            var existing = GetProductByNameCore(product.Name);
             if (existing != null && existing.Id != product.Id)
             {
                 message = "Product already exists.";
                 return null;
             }
             //Find existing
-            existing = existing ?? GetById(product.Id);
+            existing = existing ?? GetCore(product.Id);
             if (existing == null)
             {
                 message = "Product not found.";
                 return null;
             };
 
-            // Clone the object
-            //_products[existingIndex] = Clone(product);
-            Copy(existing, product);
-            message = null;
-
-            //Return a copy
-            return product;
+            return UpdateCore(product);
         }
 
         /// <summary>Gets all products.</summary>
@@ -114,71 +109,18 @@ namespace Nile.Data
 
             if (id > 0)
             {
-                var existing = GetById(id);
-                if (existing != null)
-                    _products.Remove(existing);
+                RemoveCore(id);
             };
         }
 
         protected abstract Product AddCore( Product product );
         protected abstract IEnumerable<Product> GetAllCore();
         protected abstract Product GetCore( int id );
+        protected abstract void RemoveCore( int id );
+        protected abstract Product UpdateCore( Product product );
+        protected abstract Product GetProductByNameCore( string name );
 
         #region Private Members
-
-        //Clone a product
-        private Product Clone ( Product item )
-        {
-            var newProduct = new Product();
-            Copy(newProduct, item);
-
-            return newProduct;
-        }
-
-        //Copy a product from one object to another
-        private void Copy ( Product target, Product source )
-        {
-            target.Id = source.Id;
-            target.Name = source.Name;
-            target.Description = source.Description;
-            target.Price = source.Price;
-            target.IsDiscontinued = source.IsDiscontinued;
-        }
-
-        //private int FindEmptyProductIndex()
-        //{
-        //    for (var index = 0; index < _products.Length; ++index)
-        //    {
-        //        if (_products[index] == null)
-        //            return index;
-        //    };
-
-        //    return -1;
-        //}
-
-        //Find a product by its ID
-        private Product GetById ( int id )
-        {
-            //for (var index = 0; index < _products.Length; ++index)
-            foreach (var product in _products)
-            {
-                if (product.Id == id)
-                    return product;
-            };
-
-            return null;
-        }
-
-        private Product GetProductByName ( string name)
-        {
-            foreach (var product in _products)
-            {               
-                if (String.Compare(product.Name, name, true) == 0)
-                    return product;
-            };
-
-            return null;
-        }
 
         private readonly List<Product> _products = new List<Product>();
         private int _nextId = 1;
