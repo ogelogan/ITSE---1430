@@ -59,15 +59,16 @@ namespace Nile.Windows
             //Get selected product
             var product = GetSelectedProduct();
             if (product == null)
+            {
+                MessageBox.Show(this, "NO product selected", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            EditProduct(product);
+        }
 
-            //var index = FindEmptyProductIndex() - 1;
-            //if (index < 0)
-            //    return;                        
-            //if (_product == null)
-            //    return;
-
-            var form = new ProductDetailForm(product);            
+        private void EditProduct(Product product)
+        {
+            var form = new ProductDetailForm(product);
             var result = form.ShowDialog(this);
             if (result != DialogResult.OK)
                 return;
@@ -83,16 +84,18 @@ namespace Nile.Windows
 
         private void OnProductRemove( object sender, EventArgs e )
         {
-            //var index = FindEmptyProductIndex() - 1;
-            //if (index < 0)
-            //  return;
-
-            //Get the selected product
             var product = GetSelectedProduct();
             if (product == null)
+            {
+                MessageBox.Show(this, "NO product selected", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            DeleteProduct(product);
+        }
 
-            if (!ShowConfirmation("Are you sure?", "Remove Product"))                             
+        private void DeleteProduct( Product product )
+        {
+            if (!ShowConfirmation("Are you sure?", "Remove Product"))
                 return;
 
             //Remove product
@@ -100,8 +103,8 @@ namespace Nile.Windows
             //_products[index] = null;
 
             RefreshUI();
-        }        
-        
+        }
+
         private void OnHelpAbout( object sender, EventArgs e )
         {
             MessageBox.Show(this, "Not implemented", "Help About", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -135,5 +138,30 @@ namespace Nile.Windows
         }
 
         private IProductDatabase _database = new MemoryProductDatabase();
+
+        private void OnCellDoubleClick( object sender, DataGridViewCellEventArgs e )
+        {
+            var product = GetSelectedProduct();
+            if (product == null)
+                return;
+
+            EditProduct(product);
+        }
+
+        private void OnCellKeyDown( object sender, KeyEventArgs e )
+        {
+            var product = GetSelectedProduct();
+            if (product == null)
+                return;
+            if (e.KeyCode == Keys.Delete)
+            {
+                e.Handled = true;
+                DeleteProduct(product);
+            } else if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                EditProduct(product);
+            }
+        }
     }
 }
