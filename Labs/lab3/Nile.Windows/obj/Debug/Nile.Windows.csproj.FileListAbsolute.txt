@@ -1,0 +1,15 @@
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.Windows.exe.config
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.Windows.exe
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.Windows.pdb
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.MainForm.resources
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.ProductDetailForm.resources
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.Properties.Resources.resources
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.csproj.GenerateResource.Cache
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.exe
+C:\Users\logan\Desktop\Section3v2\Nile.Windows\obj\Debug\Nile.Windows.pdb
