@@ -47,6 +47,9 @@ namespace Nile
         /// <summary>Determines if the product is discontinued.</summary>
         public bool IsDiscontinued { get; set; }
         
+        /// <summary>Validate the product.</summary>
+        /// <param name="validationContext">The validation context.</param>
+        /// <returns>The validation results.</returns>
         public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
         {
             var errors = new List<ValidationResult>();

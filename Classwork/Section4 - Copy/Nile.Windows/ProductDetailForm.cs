@@ -50,7 +50,7 @@ namespace Nile.Windows
         {
         }
 
-        private void OnSave( object sender, EventArgs e )
+        private void OnSave ( object sender, EventArgs e )
         {
             //Force validation of child controls
             if (!ValidateChildren())
@@ -65,13 +65,7 @@ namespace Nile.Windows
             };
 
             //Validate product using IValidatableObject
-            //var message = product.Validate();
-            //if (!String.IsNullOrEmpty(message))
-            //{
-            //    DisplayError(message);
-            //    return;
-            //};
-            var errors = ObjectValidator.Validate(product);
+            var errors = ObjectValidator.TryValidate(product);
             if (errors.Count() > 0)
             {
                 //Get first error
