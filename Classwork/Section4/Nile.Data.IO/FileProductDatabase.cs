@@ -24,7 +24,6 @@ namespace Nile.Data.IO
             _items.Add(product);
 
             SaveData();
-
             return product;
         }
 
@@ -39,6 +38,8 @@ namespace Nile.Data.IO
         protected override Product GetCore( int id )
         {
             EnsureInitialized();
+
+            //Use Enumerable.FirstOrDefault
             return _items.FirstOrDefault(i => i.Id == id);
             //foreach (var item in _items)
             //{
@@ -48,7 +49,10 @@ namespace Nile.Data.IO
 
             //return null;
         }
-        //private bool IsId( Product product, int id)
+        
+        //Compiler converts previous lambda into a private type with
+        //this method, effectively
+        //private bool IsId ( Product product )
         //{
         //    return product.Id == id;
         //}
@@ -56,14 +60,18 @@ namespace Nile.Data.IO
         protected override Product GetProductByNameCore( string name )
         {
             EnsureInitialized();
-            return _items.FirstOrDefault(i => String.Compare(i.Name, name, true) == 0);
+
+            //Use Enumerable.FirstOrDefault
+            return _items.FirstOrDefault(
+                    i => String.Compare(i.Name, name, true) == 0);
 
             //foreach (var item in _items)
             //{
             //    if (String.Compare(item.Name, name, true) == 0)
             //        return item;
-            //};            foreach (var item in _items)
+            //};
 
+            //return null;
         }
 
         protected override void RemoveCore( int id )
@@ -107,11 +115,13 @@ namespace Nile.Data.IO
                 //    if (item.Id > _id)
                 //        _id = item.Id;
                 //};
+                //Using Enumerable.Any
                 if (_items.Any())
                 {
+                    //Using Enumerable.Max
                     _id = _items.Max(i => i.Id);
                     ++_id;
-                }
+                };
             };
         }
 
@@ -126,6 +136,8 @@ namespace Nile.Data.IO
                     return items;
 
                 var lines = File.ReadAllLines(_filename);
+
+                //Could do with Enumerable.Select
                 foreach (var line in lines)
                 {
                     var fields = line.Split(',');
@@ -148,22 +160,23 @@ namespace Nile.Data.IO
                 throw new Exception("Failure loading data", e);
             };
         }
-        //better way to close streams
+
         private void SaveData()
         {
             using (var stream = File.OpenWrite(_filename))
             using (var writer = new StreamWriter(stream))
-            {
+            { 
+                //Not easily doable with Enumerable, stick with foreach
                 foreach (var item in _items)
                 {
                     var line = $"{item.Id},{item.Name},{item.Description}," +
                                $"{item.Price},{(item.IsDiscontinued ? 1 : 0)}";
 
                     writer.WriteLine(line);
-                };
+                };            
             };
         }
-        //c++ way of to close streams
+
         private void SaveDataPoorer()
         {
             Stream stream = null;
@@ -179,7 +192,7 @@ namespace Nile.Data.IO
                                $"{item.Price},{(item.IsDiscontinued ? 1 : 0)}";
 
                     writer.WriteLine(line);
-                };               
+                };                
             } catch (ArgumentException e)
             {
                 //Example of rethrowing an exception
@@ -192,7 +205,6 @@ namespace Nile.Data.IO
                 throw new Exception("Save failed", e);
             } finally
             {
-
                 writer?.Close();
                 stream?.Close();
             };
@@ -200,6 +212,11 @@ namespace Nile.Data.IO
 
         private void SaveDataNonstream ()
         {
+            //Using Enumerable.Select
+            var lines = _items.Select(item => 
+                            $"{item.Id},{item.Name},{item.Description}," +
+                            $"{item.Price},{(item.IsDiscontinued ? 1 : 0)}");
+
             //var lines = new List<string>();
 
             //foreach (var item in _items)
@@ -208,8 +225,6 @@ namespace Nile.Data.IO
             //               $"{item.Price},{(item.IsDiscontinued ? 1 : 0)}";
             //    lines.Add(line);
             //};
-            var lines = _items.Select(item => $"{item.Id},{item.Name},{item.Description}," +
-                           $"{item.Price},{(item.IsDiscontinued ? 1 : 0)}");
 
             File.WriteAllLines(_filename, lines);
         }
