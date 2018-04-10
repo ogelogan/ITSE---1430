@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -97,6 +98,10 @@
     <ProjectReference Include="..\Nile.Data.Memory\Nile.Data.Memory.csproj">
       <Project>{f95ae9be-fb3f-41c6-b6fe-a7a4c32edeff}</Project>
       <Name>Nile.Data.Memory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nile.Data.Sequel\Nile.Data.Sequel.csproj">
+      <Project>{59806f61-1d4b-4a47-8d18-b851973e3efd}</Project>
+      <Name>Nile.Data.Sequel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Nile\Nile.csproj">
       <Project>{f3b8dd6e-7216-496a-bd6a-bee83dbf9cd4}</Project>
