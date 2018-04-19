@@ -38,7 +38,6 @@ namespace Nile
         
         /// <summary>Gets or sets the price.</summary>
         [RangeAttribute(0, Double.MaxValue, ErrorMessage = "Price must be >= 0.")]
-
         public decimal Price { get; set; }
         
         //Be very careful about lambda properties
