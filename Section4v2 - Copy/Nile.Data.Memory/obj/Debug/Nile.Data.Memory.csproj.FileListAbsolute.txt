@@ -1,0 +1,8 @@
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb

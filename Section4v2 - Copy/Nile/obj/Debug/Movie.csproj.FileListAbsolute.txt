@@ -1,0 +1,12 @@
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\obj\Debug\Movie.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\obj\Debug\Movie.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\obj\Debug\Nile.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile\obj\Debug\Nile.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\obj\Debug\Movie.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\obj\Debug\Movie.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\obj\Debug\Nile.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile\obj\Debug\Nile.pdb

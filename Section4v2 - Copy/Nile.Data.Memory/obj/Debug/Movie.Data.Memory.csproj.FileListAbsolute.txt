@@ -1,0 +1,16 @@
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Movie.Data.Memory.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Movie.Data.Memory.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Movie.Data.Memory.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Movie.Data.Memory.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.Memory\bin\Debug\Nile.pdb

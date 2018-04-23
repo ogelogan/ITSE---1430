@@ -1,0 +1,16 @@
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.Data.IO.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.Data.IO.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Movie.Data.IO.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Movie.Data.IO.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Nile.Data.IO.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Nile.Data.IO.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.Data.IO.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.Data.IO.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\bin\Debug\Nile.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Movie.Data.IO.csprojResolveAssemblyReference.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Movie.Data.IO.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Nile.Data.IO.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\Nile.Data.IO\obj\Debug\Nile.Data.IO.pdb

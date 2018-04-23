@@ -1,0 +1,10 @@
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
+C:\Users\logan\Desktop\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb
