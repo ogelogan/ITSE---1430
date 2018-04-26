@@ -176,5 +176,15 @@ namespace Movie.Data.Sql
             };
             return movie;
         }
+
+        public override Nile.Movie Add(Nile.Movie movie, out string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Nile.Movie Update(Nile.Movie movie, out string message)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
