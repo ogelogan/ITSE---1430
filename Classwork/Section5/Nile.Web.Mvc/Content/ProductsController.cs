@@ -23,42 +23,33 @@ namespace Nile.Web.Mvc.Content
         {
             var products = _database.GetAll();
 
-            return Json(products.Select(p => p.ToModel()), JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpGet]
-        public ActionResult Details(int id)
-        {
-            var product = _database.GetAll().FirstOrDefault(p => p.Id == id);
-            if (product == null)
-                return HttpNotFound();
-
-            return Json(product.ToModel(), JsonRequestBehavior.AllowGet);
+            return View(products.Select(p => p.ToModel()));
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            return Json(new ProductModel(), JsonRequestBehavior.AllowGet);
+            return View(new ProductModel());
         }
 
         [HttpPost]
         public ActionResult Create(ProductModel model)
         {
-            if (!ModelState.IsValid)
-                throw new Exception("Model not valid");
             try
             {
-                var product = model.ToDomain();
+                if (ModelState.IsValid)
+                {
+                    var product = model.ToDomain();
 
-                product = _database.Add(product);
-                return Json(product.ToModel(), JsonRequestBehavior.AllowGet);
+                    product = _database.Add(product);
+                    return RedirectToAction(nameof(Index));                    
+                }
             } catch (Exception e)
             {
                 ModelState.AddModelError("", e.Message);
             };
 
-            return Json(ModelState, JsonRequestBehavior.AllowGet);
+            return View(model);
         }
 
         [HttpGet]
@@ -69,55 +60,56 @@ namespace Nile.Web.Mvc.Content
             if (product == null)
                 return HttpNotFound();
 
-            return Json(product.ToModel(), JsonRequestBehavior.AllowGet);
+            return View(product.ToModel());
         }
         [HttpPost]
         public ActionResult Edit( ProductModel model )
         {
-            if (!ModelState.IsValid)
-                throw new Exception("Model not valid");
             try
             {
-                var product = model.ToDomain();
+                    if (ModelState.IsValid)
+                    {
+                        var product = model.ToDomain();
 
-                product = _database.Update(product);
-                return Json(product.ToModel(), JsonRequestBehavior.AllowGet);
+                        product = _database.Update(product);
+                    return RedirectToAction("Index");
+                    }
             } catch (Exception e)
             {
                 ModelState.AddModelError("", e.Message);
             };
 
-            return Json(ModelState, JsonRequestBehavior.AllowGet);
+            return View(model);
         }
 
         [HttpGet]
-        [Route("products/deelte/{id}")]
-        public ActionResult GetDelete( int id )
+        [Route("products/delete/{id}")]
+        public ActionResult Delete( int id )
         {
             var product = _database.GetAll().FirstOrDefault(p => p.Id == id);
 
             if (product == null)
                 return HttpNotFound();
 
-            return Json(product.ToModel(), JsonRequestBehavior.AllowGet);
+            return View(product.ToModel());
         }
         [HttpPost]
-        public ActionResult Delete( int id )
+        public ActionResult Delete( ProductModel model )
         {
             try
             {
-                var product = _database.GetAll().FirstOrDefault(p => p.Id == id);
+                var product = _database.GetAll().FirstOrDefault(p => p.Id == model.Id);
                 if (product == null)
                     return HttpNotFound();
 
-                _database.Remove(id);
-                return Content("");
+                _database.Remove(model.Id);
+                return RedirectToAction(nameof(Index));
             } catch (Exception e)
             {
                 ModelState.AddModelError("", e.Message);
             };
 
-            return Json(ModelState, JsonRequestBehavior.AllowGet);
+            return View(model);
         }
     }
 }
