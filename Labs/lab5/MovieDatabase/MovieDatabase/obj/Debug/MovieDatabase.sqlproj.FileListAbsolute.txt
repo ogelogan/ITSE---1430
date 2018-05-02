@@ -1,0 +1,14 @@
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\Model.xml
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\refactor.xml
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\postdeploy.sql
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\predeploy.sql
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb
