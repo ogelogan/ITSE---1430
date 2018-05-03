@@ -180,10 +180,6 @@
       <Project>{59806F61-1D4B-4A47-8D18-B851973E3EFD}</Project>
       <Name>Nile.Data.Sequel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Nile\Nile.csproj">
-      <Project>{f3b8dd6e-7216-496a-bd6a-bee83dbf9cd4}</Project>
-      <Name>Nile</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
