@@ -1,7 +1,7 @@
 ﻿/*
  * ITSE 1430
  * lab4
- * logan oge
+ * Logan Oge
  */
 using System;
 using System.Windows.Forms;
