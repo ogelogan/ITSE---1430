@@ -10,5 +10,6 @@ C:\Users\logan\Desktop\ITSE---1430-master\Labs\Section4v2 - Copy\MovieDatabase\M
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.sqlprojResolveAssemblyReference.cache
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb

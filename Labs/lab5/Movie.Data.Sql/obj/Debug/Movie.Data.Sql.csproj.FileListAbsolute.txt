@@ -14,5 +14,6 @@ C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\bin\Debug\Nil
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\bin\Debug\Nile.pdb
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\obj\Debug\Movie.Data.Sql.csprojResolveAssemblyReference.cache
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\obj\Debug\Movie.Data.Sql.csproj.CoreCompileInputs.cache
+C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\obj\Debug\Movie.Data.Sql.csproj.CopyComplete
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\obj\Debug\Movie.Data.Sql.dll
 C:\Users\logan\Desktop\ITSE---1430-master\Labs\lab5\Movie.Data.Sql\obj\Debug\Movie.Data.Sql.pdb

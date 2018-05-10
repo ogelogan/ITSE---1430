@@ -1,8 +1,0 @@
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\bin\Debug\Nile.Data.IO.dll
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\bin\Debug\Nile.Data.IO.pdb
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\bin\Debug\Nile.dll
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\bin\Debug\Nile.pdb
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\obj\Debug\Nile.Data.IO.csprojResolveAssemblyReference.cache
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\obj\Debug\Nile.Data.IO.csproj.CoreCompileInputs.cache
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\obj\Debug\Nile.Data.IO.dll
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile.Data.IO\obj\Debug\Nile.Data.IO.pdb

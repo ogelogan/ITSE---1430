@@ -1,5 +1,0 @@
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile\bin\Debug\Nile.dll
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile\bin\Debug\Nile.pdb
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile\obj\Debug\Nile.csproj.CoreCompileInputs.cache
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile\obj\Debug\Nile.dll
-C:\Users\logan\Desktop\1430 v1\Classwork\Section4v2\Nile\obj\Debug\Nile.pdb
